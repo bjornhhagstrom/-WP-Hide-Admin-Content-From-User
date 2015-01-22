@@ -1,7 +1,9 @@
 # -WP-Hide-Admin-Content-From-User
-# Add to theme's functions.php file
-# The function below alters the query on the admin edit.php page based on the current user's role ('editor' used below)
 
+* Add to theme's functions.php file
+* The function below alters the query on the admin edit.php page based on the current user's role ('editor' used below)
+
+<pre><code>
 // Hide pages from WP User Role
 // Ref: http://wordpress.stackexchange.com/questions/91330/restrict-admin-access-to-certain-pages-for-certain-users
 add_filter( 'parse_query', 'exclude_pages_from_admin' );
@@ -15,3 +17,4 @@ function exclude_pages_from_admin($query) {
       }
     }
 }
+</code><pre>
